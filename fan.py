@@ -27,3 +27,12 @@ class Fan:
             self.__radius = radius
         else:
             print("[-] Radius must be a positive value.")
+            
+    def get_color(self) -> str:
+        return self.__color
+
+    def set_color(self, color: str) -> None:
+        if color.strip():
+            self.__color = color
+        else:
+            print("[-] Color cannot be empty.")
