@@ -27,7 +27,7 @@ class Fan:
             self.__radius = radius
         else:
             print("[-] Radius must be a positive value.")
-            
+
     def get_color(self) -> str:
         return self.__color
 
@@ -36,3 +36,9 @@ class Fan:
             self.__color = color
         else:
             print("[-] Color cannot be empty.")
+
+    def get_is_on(self) -> bool:
+        return self.__is_on
+
+    def set_is_on(self, is_on: bool) -> None:
+        self.__is_on = is_on
