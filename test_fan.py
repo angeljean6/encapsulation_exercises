@@ -17,3 +17,12 @@ def test_fan_program():
     second_fan.set_radius(5.0)
     second_fan.set_color("blue")
     second_fan.set_is_on(False)
+
+    print("Fan 1 Properties:")
+    print("Speed:", first_fan.get_speed(), "Radius:", first_fan.get_radius(), "Color:", first_fan.get_color(), "On:", first_fan.get_is_on())
+    
+    print("\nFan 2 Properties:")
+    print("Speed:", second_fan.get_speed(), "Radius:", second_fan.get_radius(), "Color:", second_fan.get_color(), "On:", second_fan.get_is_on())
+
+if __name__ == "__main__":
+    test_fan_program()
