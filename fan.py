@@ -18,3 +18,12 @@ class Fan:
             self.__speed = speed
         else:
             print("[-] Invalid speed level! Please choose SLOW (1), MEDIUM (2), or FAST (3).")
+
+    def get_radius(self) -> float:
+        return self.__radius
+
+    def set_radius(self, radius: float) -> None:
+        if radius > 0:
+            self.__radius = radius
+        else:
+            print("[-] Radius must be a positive value.")
