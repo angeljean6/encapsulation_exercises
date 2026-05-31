@@ -16,4 +16,5 @@ class Fan:
     def set_speed(self, speed: int) -> None:
         if speed in [Fan.SLOW, Fan.MEDIUM, Fan.FAST]:
             self.__speed = speed
-        
+        else:
+            print("[-] Invalid speed level! Please choose SLOW (1), MEDIUM (2), or FAST (3).")
