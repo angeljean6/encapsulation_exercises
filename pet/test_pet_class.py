@@ -47,3 +47,12 @@ class PetRegistryGUI:
 
         self.card_header = tk.Label(self.card_frame, text="SECURE VERIFIED ID PASSPORT", font=("Courier New", 10, "bold"), bg="#374151", fg="#00FFCC")
         self.card_header.pack(fill="x")
+
+        self.display_name = tk.Label(self.card_frame, text="NAME: [PENDING LOG]", font=("Courier New", 11, "bold"), bg="#1F2937", fg="#F3F4F6")
+        self.display_name.pack(anchor="w", padx=20, pady=(15, 4))
+
+        self.display_type = tk.Label(self.card_frame, text="TYPE: [PENDING LOG]", font=("Courier New", 11, "bold"), bg="#1F2937", fg="#F3F4F6")
+        self.display_type.pack(anchor="w", padx=20, pady=4)
+
+        self.display_age = tk.Label(self.card_frame, text="AGE:  [PENDING LOG]", font=("Courier New", 11, "bold"), bg="#1F2937", fg="#F3F4F6")
+        self.display_age.pack(anchor="w", padx=20, pady=(4, 15))
