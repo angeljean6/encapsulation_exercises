@@ -7,3 +7,5 @@ class CarDashboardGUI:
         self.window.title("Nitro Telemetry Matrix")
         self.window.geometry("450x350")
         self.window.configure(bg="#121212")
+        
+        self.my_car = Car(2026, "Nissan GT-R Ultra")
