@@ -36,3 +36,16 @@ class CarDashboardGUI:
 
         self.button_frame = tk.Frame(window, bg="#121212")
         self.button_frame.pack(pady=30)
+
+        self.accel_btn = tk.Button(
+            self.button_frame, 
+            text="LAUNCH ACCEL", 
+            font=("Arial", 10, "bold"),
+            bg="#00FF66", 
+            fg="#000000", 
+            activebackground="#00CC52",
+            width=15, 
+            height=2,
+            command=self.trigger_acceleration
+        )
+        self.accel_btn.grid(row=0, column=0, padx=10)
