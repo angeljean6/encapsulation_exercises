@@ -41,3 +41,9 @@ class PetRegistryGUI:
             bd=0, cursor="hand2", command=self.process_pet_data
         )
         self.submit_btn.pack(fill="x", padx=20, pady=15, ipady=8)
+
+        self.card_frame = tk.Frame(window, bg="#1F2937", bd=2, relief="solid")
+        self.card_frame.pack(padx=20, pady=(0, 20), fill="both", expand=True)
+
+        self.card_header = tk.Label(self.card_frame, text="SECURE VERIFIED ID PASSPORT", font=("Courier New", 10, "bold"), bg="#374151", fg="#00FFCC")
+        self.card_header.pack(fill="x")
