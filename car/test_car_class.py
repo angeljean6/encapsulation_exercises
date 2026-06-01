@@ -18,3 +18,6 @@ class CarDashboardGUI:
             fg="#00FF66"
         )
         self.header_label.pack(pady=20)
+
+        self.speed_frame = tk.Frame(window, bg="#1a1a1a", bd=2, relief="ridge")
+        self.speed_frame.pack(pady=10, ipadx=40, ipady=10)
