@@ -64,14 +64,19 @@ class CarDashboardGUI:
         self.brake_btn.grid(row=0, column=1, padx=10)
 
         def trigger_acceleration(self) -> None:
-        """Mutates data via accelerate method and updates UI via getter."""
+            """Mutates data via accelerate method and updates UI via getter."""
         self.my_car.accelerate()
         current_speed = self.my_car.get_speed()
         self.speed_display.config(text=f"{current_speed:03d}")
 
         def trigger_braking(self) -> None:
-        """Mutates data via brake method and updates UI via getter."""
+            """Mutates data via brake method and updates UI via getter."""
         self.my_car.brake()
         current_speed = self.my_car.get_speed()
         self.speed_display.config(text=f"{current_speed:03d}")
+
+    if __name__ == "__main__":
+        root = tk.Tk()
+        app = CarDashboardGUI(root)
+        root.mainloop()
 
