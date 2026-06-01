@@ -13,3 +13,12 @@ class Pet:
 
     def set_age(self, age: int) -> None:
         self.__age = age if age >= 0 else 0
+
+    def get_name(self) -> str:
+        return self.__name
+
+    def get_animal_type(self) -> str:
+        return self.__animal_type
+
+    def get_age(self) -> int:
+        return self.__age
