@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from pet import Pet
+from pet_class import Pet
 
 class PetRegistryGUI:
     def __init__(self, window: tk.Tk):
@@ -57,31 +57,36 @@ class PetRegistryGUI:
         self.display_age = tk.Label(self.card_frame, text="AGE:  [PENDING LOG]", font=("Courier New", 11, "bold"), bg="#1F2937", fg="#F3F4F6")
         self.display_age.pack(anchor="w", padx=20, pady=(4, 15))
 
-        def process_pet_data(self) -> None:
+    def process_pet_data(self) -> None:
             """Collects raw visual text, updates backend data models, and updates UI using accessors."""
             raw_name = self.name_entry.get()
             raw_type = self.type_entry.get()
             raw_age_str = self.age_entry.get()
 
-        try:
-            if not raw_name.strip() or not raw_type.strip():
-                raise ValueError("Fields cannot be empty space values.")
+            try:
+                if not raw_name.strip() or not raw_type.strip():
+                    raise ValueError("Fields cannot be empty space values.")
             
-            raw_age = int(raw_age_str)
-            if raw_age < 0:
-                raise ValueError("Age cannot be structurally negative.")
+                raw_age = int(raw_age_str)
+                if raw_age < 0:
+                    raise ValueError("Age cannot be structurally negative.")
             
-        except ValueError:
-            messagebox.showerror("System Error", "Please ensure names/types are filled and age is a positive integer entry.")
-            return
+            except ValueError:
+                messagebox.showerror("System Error", "Please ensure names/types are filled and age is a positive integer entry.")
+                return
         
-        self.active_pet.set_name(raw_name)
-        self.active_pet.set_animal_type(raw_type)
-        self.active_pet.set_age(raw_age)
+            self.active_pet.set_name(raw_name)
+            self.active_pet.set_animal_type(raw_type)
+            self.active_pet.set_age(raw_age)
 
-        self.display_name.config(text=f"NAME: {self.active_pet.get_name().upper()}")
-        self.display_type.config(text=f"TYPE: {self.active_pet.get_animal_type().upper()}")
-        self.display_age.config(text=f"AGE:  {self.active_pet.get_age()} YEARS OLD")
+            self.display_name.config(text=f"NAME: {self.active_pet.get_name().upper()}")
+            self.display_type.config(text=f"TYPE: {self.active_pet.get_animal_type().upper()}")
+            self.display_age.config(text=f"AGE:  {self.active_pet.get_age()} YEARS OLD")
 
-        self.card_frame.config(highlightbackground="#00FFCC", highlightcolor="#00FFCC", highlightthickness=2)
-        self.card_header.config(bg="#00FFCC", fg="#0B0F19")
+            self.card_frame.config(highlightbackground="#00FFCC", highlightcolor="#00FFCC", highlightthickness=2)
+            self.card_header.config(bg="#00FFCC", fg="#0B0F19")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = PetRegistryGUI(root)
+    root.mainloop()
