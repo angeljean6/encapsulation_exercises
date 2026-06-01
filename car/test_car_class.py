@@ -21,3 +21,12 @@ class CarDashboardGUI:
 
         self.speed_frame = tk.Frame(window, bg="#1a1a1a", bd=2, relief="ridge")
         self.speed_frame.pack(pady=10, ipadx=40, ipady=10)
+
+        self.speed_display = tk.Label(
+            self.speed_frame, 
+            text="000", 
+            font=("Helvetica", 48, "bold"), 
+            bg="#1a1a1a", 
+            fg="#00E5FF"
+        )
+        self.speed_display.pack()
