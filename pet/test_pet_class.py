@@ -34,3 +34,10 @@ class PetRegistryGUI:
         tk.Label(self.form_frame, text="Standard Matrix Age:", font=("Arial", 10), bg="#111827", fg="#F3F4F6").pack(anchor="w", padx=15, pady=(10, 2))
         self.age_entry = tk.Entry(self.form_frame, font=("Arial", 11), bg="#1F2937", fg="#FFFFFF", insertbackground="white", bd=1)
         self.age_entry.pack(fill="x", padx=15, ipady=4)
+        
+        self.submit_btn = tk.Button(
+            window, text="⚡ GENERATE PASSPORT ⚡", font=("Arial", 11, "bold"),
+            bg="#00FFCC", fg="#0B0F19", activebackground="#00CCAA", activeforeground="#0B0F19",
+            bd=0, cursor="hand2", command=self.process_pet_data
+        )
+        self.submit_btn.pack(fill="x", padx=20, pady=15, ipady=8)
