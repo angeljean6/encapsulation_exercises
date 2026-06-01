@@ -22,3 +22,15 @@ class PetRegistryGUI:
             bg="#111827", fg="#9CA3AF", bd=2, relief="groove"
         )
         self.form_frame.pack(padx=20, pady=10, fill="both", expand=True)
+
+        tk.Label(self.form_frame, text="Pet Identity Name:", font=("Arial", 10), bg="#111827", fg="#F3F4F6").pack(anchor="w", padx=15, pady=(10, 2))
+        self.name_entry = tk.Entry(self.form_frame, font=("Arial", 11), bg="#1F2937", fg="#FFFFFF", insertbackground="white", bd=1)
+        self.name_entry.pack(fill="x", padx=15, ipady=4)
+
+        tk.Label(self.form_frame, text="Animal Classification (e.g., Dog, Cat):", font=("Arial", 10), bg="#111827", fg="#F3F4F6").pack(anchor="w", padx=15, pady=(10, 2))
+        self.type_entry = tk.Entry(self.form_frame, font=("Arial", 11), bg="#1F2937", fg="#FFFFFF", insertbackground="white", bd=1)
+        self.type_entry.pack(fill="x", padx=15, ipady=4)
+
+        tk.Label(self.form_frame, text="Standard Matrix Age:", font=("Arial", 10), bg="#111827", fg="#F3F4F6").pack(anchor="w", padx=15, pady=(10, 2))
+        self.age_entry = tk.Entry(self.form_frame, font=("Arial", 11), bg="#1F2937", fg="#FFFFFF", insertbackground="white", bd=1)
+        self.age_entry.pack(fill="x", padx=15, ipady=4)
