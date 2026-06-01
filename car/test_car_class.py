@@ -30,3 +30,9 @@ class CarDashboardGUI:
             fg="#00E5FF"
         )
         self.speed_display.pack()
+
+        self.unit_label = tk.Label(self.speed_frame, text="KM / H", font=("Arial", 10, "bold"), bg="#1a1a1a", fg="#777777")
+        self.unit_label.pack()
+
+        self.button_frame = tk.Frame(window, bg="#121212")
+        self.button_frame.pack(pady=30)
