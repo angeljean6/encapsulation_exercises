@@ -49,3 +49,16 @@ class CarDashboardGUI:
             command=self.trigger_acceleration
         )
         self.accel_btn.grid(row=0, column=0, padx=10)
+
+        self.brake_btn = tk.Button(
+            self.button_frame, 
+            text="BREMBO BRAKE", 
+            font=("Arial", 10, "bold"),
+            bg="#FF3333", 
+            fg="#FFFFFF", 
+            activebackground="#CC2424",
+            width=15, 
+            height=2,
+            command=self.trigger_braking
+        )
+        self.brake_btn.grid(row=0, column=1, padx=10)
