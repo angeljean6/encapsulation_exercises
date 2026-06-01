@@ -1,0 +1,26 @@
+class Pet:
+    def __init__(self):
+        """Constructor initializing private fields for encapsulation."""
+        self.__name = ""
+        self.__animal_type = ""
+        self.__age = 0
+
+    # --- SETTERS (Mutators) ---
+    def set_name(self, name: str) -> None:
+        self.__name = name if name.strip() else "Unknown"
+
+    def set_animal_type(self, animal_type: str) -> None:
+        self.__animal_type = animal_type if animal_type.strip() else "Unknown"
+
+    def set_age(self, age: int) -> None:
+        self.__age = age if age >= 0 else 0
+
+    # --- GETTERS (Accessors) ---
+    def get_name(self) -> str:
+        return self.__name
+
+    def get_animal_type(self) -> str:
+        return self.__animal_type
+
+    def get_age(self) -> int:
+        return self.__age
