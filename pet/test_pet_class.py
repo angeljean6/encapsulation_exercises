@@ -74,3 +74,14 @@ class PetRegistryGUI:
         except ValueError:
             messagebox.showerror("System Error", "Please ensure names/types are filled and age is a positive integer entry.")
             return
+        
+        self.active_pet.set_name(raw_name)
+        self.active_pet.set_animal_type(raw_type)
+        self.active_pet.set_age(raw_age)
+
+        self.display_name.config(text=f"NAME: {self.active_pet.get_name().upper()}")
+        self.display_type.config(text=f"TYPE: {self.active_pet.get_animal_type().upper()}")
+        self.display_age.config(text=f"AGE:  {self.active_pet.get_age()} YEARS OLD")
+
+        self.card_frame.config(highlightbackground="#00FFCC", highlightcolor="#00FFCC", highlightthickness=2)
+        self.card_header.config(bg="#00FFCC", fg="#0B0F19")
