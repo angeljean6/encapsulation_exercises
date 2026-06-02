@@ -1,4 +1,4 @@
-from fan.fan import Fan
+from fan import Fan
 
 def main():
     print("=" * 44)
